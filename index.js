@@ -8,7 +8,7 @@ const path=require('path');
 
 app.use(cors())
 app.use(express.json())
-app.use('/',require('./routes/index'))
+app.use('/api/',require('./routes/index'))
 
 
 app.get("*", (req, res) => {

@@ -22,7 +22,7 @@ const Main = () => {
   useEffect(() => {
     const fetchDataFromApi = async () => {
       try {
-        const response = await axios.get(`/get-data`);
+        const response = await axios.get(`/api/get-data`);
         // console.log("Recvd from backend",response.data.data);
         setData(response.data.data);
       } catch (error) {
