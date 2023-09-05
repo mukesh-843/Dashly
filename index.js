@@ -1,11 +1,12 @@
 require('dotenv').config()
 const express=require('express')
-const port=5451
+const port=5451||process.env.PORT;
 const db=require('./config/mongoose');
 const app=express()
 
 
 app.use(express.json())
+app.use(cors())
 app.use('/',require('./routes/index'))
 
 
