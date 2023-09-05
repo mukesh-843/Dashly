@@ -3,10 +3,10 @@ const express=require('express')
 const port=5451||process.env.PORT;
 const db=require('./config/mongoose');
 const app=express()
+const cors=require('cors');
 
-
-app.use(express.json())
 app.use(cors())
+app.use(express.json())
 app.use('/',require('./routes/index'))
 
 
